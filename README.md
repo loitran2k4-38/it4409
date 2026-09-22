@@ -49,11 +49,18 @@ python3 -m http.server 8000
 - SEO: `<title>`, `<meta name="description">`, phân cấp `<h1>`-`<h6>`, alt text
 - Danh sách: `<ul>`, `<ol>`, `<dl>`/`<dt>`/`<dd>`
 
-## Cần chỉnh sửa
+## Thông tin sinh viên
 
-Các thông tin trong `index.html` hiện là dữ liệu mẫu, cần thay bằng thông tin thật:
+| | |
+|---|---|
+| Họ tên | Trần Bá Lợi |
+| MSSV | 20225357 |
+| Lớp | Kỹ thuật máy tính 05 |
+| Khóa | K67 |
+| Email | loi.tb225358@sis.hust.edu.vn |
 
-- Họ tên, MSSV, lớp, khóa, email (phần hero và footer)
-- Chữ cái viết tắt trong `.avatar-circle`
-- Tên giảng viên, học kỳ, tỉ lệ đánh giá (phần môn học)
-- Trạng thái bài tập và giá trị `value` của thẻ `<progress>` (phần tiến độ)
+## Còn là dữ liệu mẫu
+
+- Tên giảng viên và tỉ lệ đánh giá (phần môn học)
+- Nội dung phần "Giới thiệu bản thân" và danh sách kỹ năng
+- Trạng thái bài tập và giá trị `value` của thẻ `<progress>` — cần cập nhật sau mỗi bài
