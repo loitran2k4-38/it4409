@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO: title 50-60 ký tự, description 140-160 ký tự -->
+  <title>Nguyễn Văn A | Sinh viên HUST - Môn IT4409</title>
+  <meta name="description"
+        content="Trang cá nhân của sinh viên HUST theo học môn IT4409 - Công nghệ Web và Dịch vụ trực tuyến. Giới thiệu bản thân, thông tin môn học và tiến độ hoàn thành bài tập.">
+  <meta name="author" content="Nguyễn Văn A">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ===== HEADER + NAV ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top">
+        <span class="brand-mark">IT</span>
+        <span class="brand-text">4409</span>
+      </a>
+
+      <nav aria-label="Điều hướng chính">
+        <ul class="nav-list">
+          <li><a href="#about">Giới thiệu</a></li>
+          <li><a href="#course">Môn học</a></li>
+          <li><a href="#progress">Tiến độ</a></li>
+          <li><a href="#log">Nhật ký</a></li>
+          <li><a href="#contact">Liên hệ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ===== HERO: THÔNG TIN CÁ NHÂN ===== -->
+    <section class="hero">
+      <div class="container hero-inner">
+
+        <figure class="avatar">
+          <div class="avatar-circle" aria-hidden="true">NA</div>
+          <figcaption class="sr-only">Ảnh đại diện của Nguyễn Văn A</figcaption>
+        </figure>
+
+        <div class="hero-text">
+          <p class="eyebrow">Xin chào, tôi là</p>
+          <h1>Nguyễn Văn A</h1>
+          <p class="tagline">
+            Sinh viên <strong>Công nghệ thông tin</strong> &mdash; Đại học Bách khoa Hà Nội.
+            Đang trên hành trình trở thành <em>Web Developer</em>.
+          </p>
+
+          <!-- Danh sách định nghĩa: dùng <dl>/<dt>/<dd> đúng ngữ nghĩa -->
+          <dl class="fact-list">
+            <div class="fact">
+              <dt>MSSV</dt>
+              <dd>20221234</dd>
+            </div>
+            <div class="fact">
+              <dt>Lớp</dt>
+              <dd>Việt Nhật 02</dd>
+            </div>
+            <div class="fact">
+              <dt>Khóa</dt>
+              <dd>K67</dd>
+            </div>
+            <div class="fact">
+              <dt>Email</dt>
+              <dd><a href="mailto:a.nv@sis.hust.edu.vn">a.nv@sis.hust.edu.vn</a></dd>
+            </div>
+          </dl>
+
+          <p class="hero-actions">
+            <a class="btn btn-primary" href="#progress">Xem tiến độ bài tập</a>
+            <a class="btn btn-ghost" href="https://github.com/loitran2k4-38/it4409">Kho mã nguồn GitHub</a>
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===== GIỚI THIỆU BẢN THÂN ===== -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2>Giới thiệu bản thân</h2>
+
+        <div class="grid-2">
+          <article class="prose">
+            <p>
+              Tôi là sinh viên năm ba ngành Công nghệ thông tin tại Trường Công nghệ Thông tin
+              và Truyền thông &mdash; Đại học Bách khoa Hà Nội. Tôi quan tâm đến
+              <strong>phát triển web</strong>, đặc biệt là mảng giao diện người dùng:
+              làm sao để một trang web vừa dễ nhìn, vừa dễ dùng, vừa chạy nhanh.
+            </p>
+            <p>
+              Trước khi học IT4409, tôi đã quen với lập trình thuật toán và cơ sở dữ liệu.
+              Môn học này là bước đầu tiên giúp tôi ghép các mảnh kiến thức đó lại thành
+              một sản phẩm hoàn chỉnh mà người khác có thể mở lên và sử dụng được.
+            </p>
+            <p>
+              Ngoài giờ học, tôi thích đọc tài liệu kỹ thuật, luyện tập trên các nền tảng
+              thực hành và tham gia các dự án nhỏ cùng bạn bè.
+            </p>
+          </article>
+
+          <aside class="card">
+            <h3>Kỹ năng</h3>
+
+            <h4>Đang sử dụng</h4>
+            <ul class="tag-list">
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>Git &amp; GitHub</li>
+              <li>C/C++</li>
+              <li>Python</li>
+              <li>SQL</li>
+            </ul>
+
+            <h4>Đang học</h4>
+            <ul class="tag-list tag-list--muted">
+              <li>JavaScript</li>
+              <li>Responsive Design</li>
+              <li>Node.js</li>
+            </ul>
+
+            <h4>Mục tiêu học kỳ này</h4>
+            <ol class="goal-list">
+              <li>Nắm chắc HTML ngữ nghĩa và CSS layout</li>
+              <li>Tự tay xây dựng một website hoàn chỉnh</li>
+              <li>Hiểu cách web client và server trao đổi dữ liệu</li>
+            </ol>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== THÔNG TIN MÔN HỌC ===== -->
+    <section id="course" class="section section--alt">
+      <div class="container">
+        <h2>Thông tin môn học</h2>
+        <p class="section-lead">
+          IT4409 &mdash; Công nghệ Web và Dịch vụ trực tuyến
+        </p>
+
+        <table class="data-table">
+          <caption>Bảng thông tin chung về học phần</caption>
+          <thead>
+            <tr>
+              <th scope="col">Hạng mục</th>
+              <th scope="col">Nội dung</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Mã học phần</th>
+              <td>IT4409</td>
+            </tr>
+            <tr>
+              <th scope="row">Tên học phần</th>
+              <td>Công nghệ Web và Dịch vụ trực tuyến</td>
+            </tr>
+            <tr>
+              <th scope="row">Số tín chỉ</th>
+              <td>3 (3-1-0-6)</td>
+            </tr>
+            <tr>
+              <th scope="row">Khoa/Viện</th>
+              <td>Trường Công nghệ Thông tin và Truyền thông (SOICT)</td>
+            </tr>
+            <tr>
+              <th scope="row">Giảng viên</th>
+              <td>TS. Nguyễn Văn B</td>
+            </tr>
+            <tr>
+              <th scope="row">Học kỳ</th>
+              <td>20251</td>
+            </tr>
+            <tr>
+              <th scope="row">Đánh giá</th>
+              <td>Bài tập 20% &middot; Bài tập lớn 30% &middot; Thi cuối kỳ 50%</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Nội dung các chương</h3>
+        <ol class="syllabus">
+          <li>
+            <span class="syllabus-title">Tổng quan về Web</span>
+            <span class="syllabus-desc">Kiến trúc client-server, giao thức HTTP, URL</span>
+          </li>
+          <li>
+            <span class="syllabus-title">HTML</span>
+            <span class="syllabus-desc">Cấu trúc tài liệu, thẻ cơ bản, form, multimedia, semantic &amp; SEO</span>
+          </li>
+          <li>
+            <span class="syllabus-title">CSS</span>
+            <span class="syllabus-desc">Selector, box model, layout, responsive design</span>
+          </li>
+          <li>
+            <span class="syllabus-title">JavaScript</span>
+            <span class="syllabus-desc">Cú pháp, DOM, sự kiện, bất đồng bộ</span>
+          </li>
+          <li>
+            <span class="syllabus-title">Web Server &amp; API</span>
+            <span class="syllabus-desc">Xây dựng dịch vụ phía máy chủ, RESTful API</span>
+          </li>
+          <li>
+            <span class="syllabus-title">Bảo mật &amp; Triển khai</span>
+            <span class="syllabus-desc">Xác thực, phân quyền, đưa ứng dụng lên môi trường thật</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== TIẾN ĐỘ BÀI TẬP ===== -->
+    <section id="progress" class="section">
+      <div class="container">
+        <h2>Tiến độ bài tập</h2>
+        <p class="section-lead">
+          Cập nhật lần cuối: <time datetime="2026-09-22">22/09/2026</time>
+        </p>
+
+        <!-- Thẻ <progress> của HTML5: hiển thị tiến độ mà không cần JavaScript -->
+        <div class="progress-overview">
+          <div class="progress-head">
+            <span class="progress-label">Hoàn thành tổng thể</span>
+            <span class="progress-value">1 / 5 bài</span>
+          </div>
+          <progress class="progress-bar" value="20" max="100">20%</progress>
+        </div>
+
+        <table class="data-table data-table--tasks">
+          <caption>Danh sách bài tập chương 2 &mdash; HTML</caption>
+          <thead>
+            <tr>
+              <th scope="col">Bài</th>
+              <th scope="col">Yêu cầu</th>
+              <th scope="col">Kỹ thuật chính</th>
+              <th scope="col">Hạn nộp</th>
+              <th scope="col">Trạng thái</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Ex1</th>
+              <td>Trang HTML đơn giản với các thẻ cơ bản</td>
+              <td>heading, paragraph, list, link, image</td>
+              <td><time datetime="2026-09-22">22/09</time></td>
+              <td><span class="badge badge--done">Hoàn thành</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Ex2</th>
+              <td>Form đăng ký mẫu</td>
+              <td>form, input, select, textarea, validation</td>
+              <td><time datetime="2026-09-29">29/09</time></td>
+              <td><span class="badge badge--doing">Đang làm</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Ex3</th>
+              <td>Trang HTML dùng thẻ ngữ nghĩa</td>
+              <td>header, nav, main, article, aside, footer</td>
+              <td><time datetime="2026-10-06">06/10</time></td>
+              <td><span class="badge badge--todo">Chưa bắt đầu</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Ex4</th>
+              <td>Dựng lại trang đăng ký của Facebook</td>
+              <td>form layout, table, CSS cơ bản</td>
+              <td><time datetime="2026-10-13">13/10</time></td>
+              <td><span class="badge badge--todo">Chưa bắt đầu</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Ex5</th>
+              <td>Dựng lại trang tìm kiếm của Google</td>
+              <td>căn giữa, input, button, responsive</td>
+              <td><time datetime="2026-10-20">20/10</time></td>
+              <td><span class="badge badge--todo">Chưa bắt đầu</span></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="table-note">
+          <strong>Ghi chú:</strong> mỗi bài tập được lưu trong một thư mục riêng của kho mã nguồn.
+          Sửa giá trị <code>value</code> của thẻ <code>&lt;progress&gt;</code> và nhãn trạng thái
+          trong bảng mỗi khi hoàn thành thêm một bài.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== NHẬT KÝ CẬP NHẬT ===== -->
+    <section id="log" class="section section--alt">
+      <div class="container">
+        <h2>Nhật ký cập nhật</h2>
+        <p class="section-lead">Những mốc đáng nhớ trong quá trình học môn này.</p>
+
+        <ol class="timeline">
+          <li>
+            <time datetime="2026-09-22">22/09/2026</time>
+            <h3>Hoàn thành landing page cá nhân</h3>
+            <p>
+              Dựng trang giới thiệu bằng HTML thuần và CSS, áp dụng thẻ ngữ nghĩa
+              và các thẻ meta phục vụ SEO đã học ở chương 2.
+            </p>
+          </li>
+          <li>
+            <time datetime="2026-09-20">20/09/2026</time>
+            <h3>Khởi tạo kho mã nguồn</h3>
+            <p>
+              Tạo repository <code>it4409</code> trên GitHub, cấu hình
+              <code>.gitignore</code> và đẩy commit đầu tiên.
+            </p>
+          </li>
+          <li>
+            <time datetime="2026-09-15">15/09/2026</time>
+            <h3>Bắt đầu chương 2 &mdash; HTML</h3>
+            <p>
+              Nắm được cấu trúc tài liệu HTML, phân biệt thẻ ngữ nghĩa và
+              thẻ không ngữ nghĩa, tìm hiểu vai trò của HTML trong bộ ba HTML/CSS/JS.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== LIÊN HỆ ===== -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Liên hệ</h2>
+        <p class="section-lead">
+          Có câu hỏi về bài tập hoặc muốn rủ tôi làm chung dự án? Gửi tin nhắn nhé.
+        </p>
+
+        <div class="grid-2">
+
+          <!-- Form minh họa validation phía trình duyệt: required, pattern, min/max -->
+          <form class="contact-form" action="#" method="post" name="contactForm">
+
+            <div class="field">
+              <label for="name">Họ và tên <span class="required">*</span></label>
+              <input type="text" id="name" name="name" placeholder="Nguyễn Văn A" required>
+            </div>
+
+            <div class="field">
+              <label for="email">Email <span class="required">*</span></label>
+              <input type="email" id="email" name="email" placeholder="ban@example.com" required>
+            </div>
+
+            <div class="field">
+              <label for="mssv">MSSV</label>
+              <input type="text" id="mssv" name="mssv" placeholder="20221234"
+                     pattern="[0-9]{8}" title="MSSV gồm đúng 8 chữ số">
+              <small class="hint">8 chữ số, ví dụ: 20221234</small>
+            </div>
+
+            <div class="field">
+              <label for="topic">Chủ đề</label>
+              <select id="topic" name="topic">
+                <option value="homework">Trao đổi bài tập</option>
+                <option value="project">Rủ làm dự án</option>
+                <option value="other">Khác</option>
+              </select>
+            </div>
+
+            <fieldset class="field">
+              <legend>Cách bạn muốn tôi phản hồi</legend>
+              <label class="choice">
+                <input type="radio" name="reply" value="email" checked> Email
+              </label>
+              <label class="choice">
+                <input type="radio" name="reply" value="teams"> Microsoft Teams
+              </label>
+              <label class="choice">
+                <input type="radio" name="reply" value="inperson"> Gặp trực tiếp
+              </label>
+            </fieldset>
+
+            <div class="field">
+              <label for="message">Nội dung <span class="required">*</span></label>
+              <textarea id="message" name="message" rows="5"
+                        placeholder="Viết nội dung tại đây..." required></textarea>
+            </div>
+
+            <label class="choice">
+              <input type="checkbox" name="copy" value="yes"> Gửi cho tôi một bản sao
+            </label>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Gửi tin nhắn</button>
+              <button type="reset" class="btn btn-ghost">Nhập lại</button>
+            </div>
+
+            <p class="form-note">
+              Form này chưa nối với máy chủ &mdash; sẽ hoàn thiện sau khi học phần backend.
+            </p>
+          </form>
+
+          <aside class="card">
+            <h3>Thông tin khác</h3>
+            <ul class="link-list">
+              <li>
+                <span class="link-label">Email</span>
+                <a href="mailto:a.nv@sis.hust.edu.vn">a.nv@sis.hust.edu.vn</a>
+              </li>
+              <li>
+                <span class="link-label">GitHub</span>
+                <a href="https://github.com/loitran2k4-38">github.com/loitran2k4-38</a>
+              </li>
+              <li>
+                <span class="link-label">Trường</span>
+                <a href="https://hust.edu.vn">hust.edu.vn</a>
+              </li>
+              <li>
+                <span class="link-label">Địa chỉ</span>
+                <span>Số 1 Đại Cồ Việt, Hai Bà Trưng, Hà Nội</span>
+              </li>
+            </ul>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Nguyễn Văn A &mdash; Bài tập môn IT4409, Đại học Bách khoa Hà Nội.</p>
+      <p><small>Xây dựng bằng HTML5 và CSS3 thuần, không dùng thư viện ngoài.</small></p>
+    </div>
+  </footer>
+
+</body>
+</html>

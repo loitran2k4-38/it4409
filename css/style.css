@@ -1,0 +1,683 @@
+/* ============================================================
+   IT4409 - Landing page cá nhân
+   CSS thuần, không dùng framework
+   ============================================================ */
+
+/* ---------- 1. Biến màu dùng chung ---------- */
+:root {
+  --navy:        #002855;   /* màu chủ đạo của HUST */
+  --navy-light:  #133b6e;
+  --red:         #c8102e;
+  --text:        #1f2933;
+  --text-muted:  #5c6b7a;
+  --bg:          #ffffff;
+  --bg-alt:      #f5f7fa;
+  --border:      #dfe4ea;
+
+  --green:       #0f7b3f;
+  --green-bg:    #e3f5ea;
+  --amber:       #8a5a00;
+  --amber-bg:    #fdf1d9;
+  --gray:        #5c6b7a;
+  --gray-bg:     #eef1f5;
+
+  --radius:      10px;
+  --shadow:      0 1px 3px rgba(0, 40, 85, .08), 0 8px 24px rgba(0, 40, 85, .06);
+  --max-width:   1080px;
+}
+
+/* ---------- 2. Reset & thiết lập cơ bản ---------- */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;   /* tránh bị header che khi nhảy tới #id */
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.25;
+  color: var(--navy);
+  margin: 0 0 .5em;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 1.9rem; }
+h3 { font-size: 1.25rem; }
+h4 { font-size: 1rem; text-transform: uppercase; letter-spacing: .05em; color: var(--text-muted); }
+
+p { margin: 0 0 1em; }
+
+a {
+  color: var(--navy-light);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+  text-decoration: underline;
+}
+
+code {
+  font-family: "Consolas", "SF Mono", Menlo, monospace;
+  font-size: .9em;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: .1em .35em;
+}
+
+/* Chỉ hiện với trình đọc màn hình */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---------- 3. Header & Navigation ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--navy);
+  border-bottom: 3px solid var(--red);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 64px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 2px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  color: #fff;
+}
+
+.brand:hover { text-decoration: none; }
+.brand-mark { color: #fff; }
+.brand-text { color: var(--red); }
+
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list a {
+  display: block;
+  padding: 8px 14px;
+  border-radius: 6px;
+  color: rgba(255, 255, 255, .85);
+  font-size: .95rem;
+}
+
+.nav-list a:hover,
+.nav-list a:focus-visible {
+  background: rgba(255, 255, 255, .12);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* ---------- 4. Hero ---------- */
+.hero {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  color: #fff;
+  padding: 64px 0;
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.hero h1 {
+  color: #fff;
+  margin-bottom: .3em;
+}
+
+.avatar { margin: 0; }
+
+.avatar-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: var(--navy);
+  background: #fff;
+  border: 5px solid var(--red);
+}
+
+.hero-text { flex: 1 1 380px; }
+
+.eyebrow {
+  margin: 0 0 .3em;
+  font-size: .9rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, .7);
+}
+
+.tagline {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, .9);
+  max-width: 52ch;
+}
+
+/* Danh sách định nghĩa dạng thẻ nhỏ */
+.fact-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 28px;
+  margin: 24px 0;
+}
+
+.fact dt {
+  font-size: .75rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, .6);
+}
+
+.fact dd {
+  margin: 0;
+  font-weight: 600;
+}
+
+.fact dd a { color: #fff; }
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 28px 0 0;
+}
+
+/* ---------- 5. Nút bấm ---------- */
+.btn {
+  display: inline-block;
+  padding: 11px 22px;
+  border: 2px solid transparent;
+  border-radius: var(--radius);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color .15s ease, color .15s ease;
+}
+
+.btn:hover { text-decoration: none; }
+
+.btn-primary {
+  background: var(--red);
+  border-color: var(--red);
+  color: #fff;
+}
+
+.btn-primary:hover { background: #a60d26; border-color: #a60d26; }
+
+.btn-ghost {
+  background: transparent;
+  border-color: currentColor;
+  color: inherit;
+}
+
+.hero .btn-ghost { color: #fff; }
+.btn-ghost:hover { background: rgba(0, 40, 85, .08); }
+.hero .btn-ghost:hover { background: rgba(255, 255, 255, .15); }
+
+/* ---------- 6. Khối section chung ---------- */
+.section { padding: 64px 0; }
+.section--alt { background: var(--bg-alt); }
+
+.section h2 {
+  position: relative;
+  padding-bottom: 12px;
+  margin-bottom: 8px;
+}
+
+.section h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 56px;
+  height: 4px;
+  background: var(--red);
+  border-radius: 2px;
+}
+
+.section-lead {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  margin-bottom: 32px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.prose { max-width: 62ch; }
+
+.card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px;
+}
+
+.card h3 { margin-top: 0; }
+.card h4 { margin: 20px 0 8px; }
+
+/* ---------- 7. Danh sách kỹ năng & mục tiêu ---------- */
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tag-list li {
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: .875rem;
+  font-weight: 500;
+  background: var(--navy);
+  color: #fff;
+}
+
+.tag-list--muted li {
+  background: var(--gray-bg);
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+}
+
+.goal-list {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--text-muted);
+}
+
+.goal-list li { margin-bottom: 6px; }
+
+/* ---------- 8. Bảng dữ liệu ---------- */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.data-table caption {
+  text-align: left;
+  font-size: .9rem;
+  color: var(--text-muted);
+  padding-bottom: 8px;
+}
+
+.data-table th,
+.data-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+.data-table thead th {
+  background: var(--navy);
+  color: #fff;
+  font-size: .85rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.data-table tbody th {
+  font-weight: 600;
+  color: var(--navy);
+  white-space: nowrap;
+}
+
+.data-table tbody tr:last-child th,
+.data-table tbody tr:last-child td { border-bottom: none; }
+
+.data-table tbody tr:hover { background: var(--bg-alt); }
+
+.table-note {
+  font-size: .9rem;
+  color: var(--text-muted);
+}
+
+/* ---------- 9. Chương trình học ---------- */
+.syllabus {
+  counter-reset: chapter;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.syllabus li {
+  counter-increment: chapter;
+  position: relative;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--red);
+  border-radius: var(--radius);
+  padding: 16px 16px 16px 56px;
+}
+
+.syllabus li::before {
+  content: counter(chapter);
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--navy);
+  color: #fff;
+  font-size: .85rem;
+  font-weight: 700;
+}
+
+.syllabus-title {
+  display: block;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.syllabus-desc {
+  display: block;
+  font-size: .9rem;
+  color: var(--text-muted);
+}
+
+/* ---------- 10. Thanh tiến độ ---------- */
+.progress-overview {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px 24px;
+  margin-bottom: 32px;
+}
+
+.progress-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
+.progress-label { font-weight: 600; color: var(--navy); }
+.progress-value { color: var(--text-muted); font-size: .95rem; }
+
+/* Thẻ <progress> cần style riêng cho từng trình duyệt */
+.progress-bar {
+  width: 100%;
+  height: 14px;
+  border: none;
+  border-radius: 999px;
+  background: var(--gray-bg);          /* Firefox */
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.progress-bar::-webkit-progress-bar {
+  background: var(--gray-bg);
+  border-radius: 999px;
+}
+
+.progress-bar::-webkit-progress-value {
+  background: linear-gradient(90deg, var(--navy), var(--red));
+  border-radius: 999px;
+}
+
+.progress-bar::-moz-progress-bar {
+  background: var(--navy);
+  border-radius: 999px;
+}
+
+/* ---------- 11. Nhãn trạng thái ---------- */
+.badge {
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 999px;
+  font-size: .8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.badge--done  { background: var(--green-bg); color: var(--green); }
+.badge--doing { background: var(--amber-bg); color: var(--amber); }
+.badge--todo  { background: var(--gray-bg);  color: var(--gray); }
+
+/* ---------- 12. Nhật ký (timeline) ---------- */
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 28px;
+  border-left: 2px solid var(--border);
+}
+
+.timeline li {
+  position: relative;
+  padding: 0 0 28px 8px;
+}
+
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: -36px;
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--red);
+  border: 3px solid var(--bg-alt);
+}
+
+.timeline time {
+  font-size: .8rem;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.timeline h3 { margin: 4px 0 6px; font-size: 1.1rem; }
+.timeline p { margin: 0; color: var(--text-muted); }
+
+/* ---------- 13. Form liên hệ ---------- */
+.contact-form {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px;
+}
+
+.field { margin-bottom: 18px; }
+
+.field > label,
+.field legend {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: .95rem;
+  color: var(--navy);
+}
+
+.required { color: var(--red); }
+
+.field input[type="text"],
+.field input[type="email"],
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 10px 12px;
+  font: inherit;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.field textarea { resize: vertical; }
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--navy-light);
+  box-shadow: 0 0 0 3px rgba(19, 59, 110, .15);
+}
+
+/* Chỉ báo lỗi sau khi người dùng đã nhập, tránh báo đỏ ngay từ đầu */
+.field input:not(:placeholder-shown):invalid {
+  border-color: var(--red);
+}
+
+fieldset.field {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+
+.choice {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-right: 16px;
+  font-size: .95rem;
+  cursor: pointer;
+}
+
+.hint {
+  display: block;
+  margin-top: 4px;
+  font-size: .82rem;
+  color: var(--text-muted);
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin: 20px 0 8px;
+}
+
+.form-note {
+  margin: 0;
+  font-size: .85rem;
+  color: var(--text-muted);
+}
+
+/* ---------- 14. Danh sách liên kết ---------- */
+.link-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.link-list li:last-child { border-bottom: none; }
+
+.link-label {
+  display: block;
+  font-size: .75rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* ---------- 15. Footer ---------- */
+.site-footer {
+  background: var(--navy);
+  color: rgba(255, 255, 255, .8);
+  border-top: 3px solid var(--red);
+  padding: 28px 0;
+}
+
+.footer-inner p { margin: 0 0 4px; }
+.footer-inner small { color: rgba(255, 255, 255, .55); }
+
+/* ---------- 16. Responsive ---------- */
+@media (max-width: 860px) {
+  .grid-2 { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 640px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+
+  .header-inner { justify-content: center; }
+  .hero { padding: 44px 0; }
+  .hero-inner { flex-direction: column; text-align: center; }
+  .fact-list, .hero-actions { justify-content: center; }
+  .section { padding: 44px 0; }
+
+  /* Bảng dài cho phép cuộn ngang thay vì vỡ layout */
+  .data-table--tasks { display: block; overflow-x: auto; white-space: nowrap; }
+
+  .form-actions { flex-direction: column; }
+  .form-actions .btn { width: 100%; text-align: center; }
+}
+
+/* ---------- 17. Chế độ in ---------- */
+@media print {
+  .site-header, .hero-actions, .contact-form { display: none; }
+  body { color: #000; }
+  .hero { background: none; color: #000; }
+  .hero h1, .eyebrow, .tagline, .fact dt, .fact dd { color: #000; }
+}
