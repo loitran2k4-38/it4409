@@ -10,10 +10,15 @@ Trang giới thiệu cá nhân viết bằng **HTML5 + CSS3 thuần**, không d�
 
 ```
 it4409/
-├── index.html      # Trang chính
-└── css/
-    └── style.css   # Toàn bộ style
+├── assets/
+│   ├── script.js   # JS tăng cường (trang vẫn chạy đủ nếu tắt JS)
+│   └── style.css   # Toàn bộ style
+├── CNAME           # Tên miền tùy chỉnh cho GitHub Pages
+├── README.md
+└── index.html      # Trang chính
 ```
+
+Trang được xuất bản tại **https://loitran.id.vn** qua GitHub Pages.
 
 ### Cách chạy
 
