@@ -9,7 +9,7 @@ Trang giới thiệu cá nhân viết bằng **HTML5 + CSS3 thuần**, không d�
 ### Cấu trúc
 
 ```
-it4409_20225358/
+it4409/
 ├── assets/
 │   ├── script.js   # JS tăng cường (trang vẫn chạy đủ nếu tắt JS)
 │   └── style.css   # Toàn bộ style
@@ -17,7 +17,7 @@ it4409_20225358/
 └── index.html      # Trang chính
 ```
 
-Trang được xuất bản tại **https://loitran2k4-38.github.io/it4409_20225358/** qua GitHub Pages.
+Trang được xuất bản tại **https://loitran.id.vn** qua GitHub Pages.
 
 ### Cách chạy
 
